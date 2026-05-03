@@ -5,8 +5,14 @@
 Concept art aprobado: SÍ.
 
 Estado: NO LISTO PARA BLENDER TODAVÍA.
-Motivo: falta documento de interacción y animación por capas.
+Motivo: falta aprobación del documento de interacción GVO-3D-07 por el responsable, y decisión de opción de implementación.
 No producir GLB todavía.
+
+Documento de interacción creado:
+- `docs/03-ux/station-2-interaction-animation-spec.md`
+
+La decisión técnica de implementación (directo 3D, slice 2D de validación u opción híbrida) sigue pendiente de decisión del responsable.
+Ver sección 10 del documento de interacción.
 
 ## 2. Asset final esperado
 
