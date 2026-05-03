@@ -6,9 +6,9 @@ Estado actual:
 
 - Hay definición UX.
 - Hay brief de producción.
-- Hay prompts de concept art.
-- No hay concept art candidato aprobado.
+- Hay concept art aprobado.
+- No hay documento de interacción cerrado.
 - No hay GLB.
 - No hay implementación React.
 
-No pasar a Blender hasta que exista concept art aprobado.
+No pasar a Blender hasta cerrar la interacción.

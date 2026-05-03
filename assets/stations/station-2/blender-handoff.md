@@ -2,10 +2,10 @@
 
 ## 1. Estado de entrada
 
-No hay concept art aprobado.
+Concept art aprobado: SÍ.
 
-Estado: NO LISTO PARA BLENDER.
-Motivo: falta aprobación visual.
+Estado: NO LISTO PARA BLENDER TODAVÍA.
+Motivo: falta documento de interacción y animación por capas.
 No producir GLB todavía.
 
 ## 2. Asset final esperado
@@ -20,6 +20,13 @@ No producir GLB todavía.
 - Flujo de 6 capas funcionales.
 - Fondo sobrio.
 - Lía solo si existe referencia aprobada y sin dominar la escena.
+
+Antes de abrir Blender se debe cerrar:
+
+- documento de interacción de Estación II;
+- definición de anclas de paneles;
+- comportamiento de Lía por capa;
+- decisión sobre si la primera implementación será 2D overlay, híbrida o GLB.
 
 ## 4. Restricciones narrativas
 

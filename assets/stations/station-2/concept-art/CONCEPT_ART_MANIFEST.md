@@ -9,9 +9,9 @@ Usar uno de estos estados:
 - `approved`
 - `rejected`
 
-Si no hay imágenes candidatas, usar:
+Estado actual:
 
-  `blocked_no_concept_art`
+  `approved`
 
 ## 2. Fuentes usadas
 
@@ -23,11 +23,10 @@ Referenciar:
 
 ## 3. Candidatos recibidos
 
-No se recibieron imágenes candidatas. Este ticket deja preparado el intake, pero queda bloqueado para registro visual hasta que el responsable genere concept art con ChatGPT Images.
-
 | ID | Archivo | Fuente/prompt | Estado | Observación |
 |----|---------|---------------|--------|-------------|
-| - | Sin archivos | No aplica | `blocked_no_concept_art` | No se entregaron imágenes candidatas |
+| C1 | `candidates/station-2-concept-c1.png` | ChatGPT Images / GVO-3D-05 | `approved` | Concept art aprobado por responsable |
+| A1 | `approved/station-2-concept-approved.png` | Copia aprobada de C1 | `approved` | Base visual para interacción y producción |
 
 ## 4. Criterios de evaluación
 
@@ -52,14 +51,21 @@ Usar una de estas salidas:
 - Pendiente: requiere revisión humana.
 - Bloqueado: no hay imágenes candidatas.
 
+Aprobado para documentación de interacción.
+Pendiente para Blender hasta cerrar documento de interacción GVO-3D-07.
+No aprobado para runtime directo.
+
 ## 6. Concept art aprobado
 
-Si hay aprobado:
-
-- Archivo aprobado:
+- Archivo aprobado: `approved/station-2-concept-approved.png`
 - Razón de aprobación:
-- Riesgos visuales a vigilar en Blender:
-
-Si no hay aprobado:
-
-- Declarar explícitamente que NO se puede abrir todavía ticket de Blender ni ticket React.
+  - muestra planta viva;
+  - muestra sensores/cables;
+  - muestra bionosificador/circuito;
+  - muestra seis capas visuales;
+  - incluye Lía como guía sin dominar;
+  - no sugiere planta -> música directa si se acompaña con copy correcto.
+- Riesgos visuales a vigilar:
+  - ondas visuales pueden parecer música autónoma si se separan del microcopy;
+  - no usar como imagen final runtime sin overlays pedagógicos;
+  - no pasar a Blender sin definición de interacción.
