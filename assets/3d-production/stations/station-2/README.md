@@ -11,12 +11,17 @@ Estado actual:
 - Decisión de implementación tomada: Opción B.
 - Opción B = slice de validación 2D previo al GLB.
 - Slice React de validación implementado: SÍ.
+- Implementación React final de Estación II: NO.
+- Implementación React/Three final con GLB: NO.
+- Implementación 3D final: NO.
 - No hay GLB.
-- No hay implementación React.
 - No hay Estación II finalizada.
-- Deuda de optimización: PNG runtime ~2.06 MB; considerar WebP futuro.
+- Deuda de optimización: PNG runtime de 2.160.381 bytes; considerar WebP futuro.
+
+El slice React actual valida interacción, microcopy y secuencia por capas.
+No debe interpretarse como cierre visual final ni como sustituto del GLB.
 
 Dirección final: 3D (ADR-003).
-Próximo paso: ticket de implementación del slice de validación.
+Próximo paso: validación móvil/laboratorio del slice y decisión humana antes de abrir handoff a Blender/GLB.
 
 No pasar a Blender hasta validar el slice o hasta aprobación explícita.

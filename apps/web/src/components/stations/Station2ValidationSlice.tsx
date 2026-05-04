@@ -154,7 +154,7 @@ const Station2ValidationSlice: FC<Props> = ({ sceneSrc }) => {
   return (
     <section className="station-2-slice" aria-labelledby="station-2-slice-title">
       <header className="station-2-slice-header">
-        <p className="screen-label">Validación de Estación II</p>
+        <p className="screen-label">Señal y mediación</p>
         <h3 id="station-2-slice-title" className="station-2-slice-title">
           Explora cómo una señal viva se convierte en una experiencia mediada.
         </h3>
