@@ -91,7 +91,14 @@ La integración runtime sigue prohibida hasta aprobación explícita y ticket po
 - Preview generado: SÍ.
 - Preview path: `assets/3d-production/stations/station-2/06-previews/station-2-bioelectric-mediation-preview.png`.
 - Método de revisión visual: preview.
-- Decisión visual: PENDIENTE DE APROBACIÓN VISUAL HUMANA.
-- GLB copiado a `glb-approved/`: NO.
+- Decisión visual: APROBADO COMO GLB CANDIDATO.
+- GLB copiado a `glb-approved/`: SÍ.
+- GLB aprobado path: `assets/3d-production/stations/station-2/05-exports/glb-approved/station-2-bioelectric-mediation.glb`.
+- Hash candidato: `F52C8C93D653EAD077B36B10009089891FE7C08D4A418B294410357D7A7350DB`.
+- Hash aprobado: `F52C8C93D653EAD077B36B10009089891FE7C08D4A418B294410357D7A7350DB`.
+- Hashes coinciden: SÍ.
 - Integración runtime: NO.
 - Estación II finalizada: NO.
+
+La aprobación visual habilita preparar integración runtime en ticket posterior.
+No autoriza copiar el GLB a `apps/web/src/assets/3d/` dentro de este ticket.

@@ -4,10 +4,9 @@
 
 Concept art aprobado: SÍ.
 
-Estado: PENDIENTE DE APROBACIÓN VISUAL HUMANA.
-Aclaración: el slice React fue validado por el responsable en iPhone y PC, el preview ya fue generado con Blender CLI y el GLB candidato todavía no tiene aprobación visual explícita.
-La validación habilita preparar el prompt/script Blender, pero no autoriza ejecutar Blender, producir GLB final, declarar Estación II finalizada ni copiar GLB a runtime.
-No producir GLB todavía.
+Estado: GLB CANDIDATO APROBADO PARA PREPARAR INTEGRACIÓN RUNTIME.
+Aclaración: el slice React fue validado por el responsable en iPhone y PC, el preview ya fue generado con Blender CLI y el GLB candidato recibió aprobación visual explícita.
+La aprobación habilita preparar el prompt/script Blender o el siguiente ticket de integración, pero no autoriza copiar GLB a runtime, declarar Estación II finalizada ni tratar el GLB como final de producción.
 
 Base validada:
 - Concept art aprobado.
@@ -15,6 +14,7 @@ Base validada:
 - Opción B registrada.
 - Slice React de validación implementado.
 - Validación humana en iPhone y PC.
+- GLB candidato aprobado por responsable.
 - Deuda PNG runtime registrada.
 
 Decisión responsable: Opción B — slice de validación 2D previo al GLB.
@@ -100,15 +100,22 @@ No permitidas:
 - preview: `assets/3d-production/stations/station-2/06-previews/station-2-bioelectric-mediation-preview.png`
 - reporte: `assets/3d-production/stations/station-2/07-validation-notes/station-2-blender-output-audit.md`
 - decisión técnica: `CANDIDATO TÉCNICAMENTE ACEPTABLE PARA REVISIÓN HUMANA`
+- GLB aprobado path: `assets/3d-production/stations/station-2/05-exports/glb-approved/station-2-bioelectric-mediation.glb`
+- decisión visual: `APROBADO COMO GLB CANDIDATO`
 - integración runtime: NO
-- GLB aprobado: NO
+- GLB aprobado: SÍ
 - Estación II finalizada: NO
 
 ## 9. Revisión visual
 
 - preview: SÍ
 - método de revisión: preview
-- decisión visual: PENDIENTE DE APROBACIÓN VISUAL HUMANA
-- GLB aprobado en staging: NO
+- decisión visual: APROBADO COMO GLB CANDIDATO
+- GLB aprobado en staging: SÍ
+- GLB aprobado path: `assets/3d-production/stations/station-2/05-exports/glb-approved/station-2-bioelectric-mediation.glb`
 - integración runtime: NO
 - Estación II finalizada: NO
+
+La aprobación del GLB candidato permite abrir un ticket de integración
+React/Three.js con fallback PNG/2D. No permite declarar la estación cerrada
+hasta validar runtime y móvil.

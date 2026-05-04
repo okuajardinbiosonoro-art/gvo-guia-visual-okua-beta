@@ -37,7 +37,11 @@ Responsable humano debe revisar:
 □ La escena puede servir como base para integración Three.js.
 
 ## 4. Decisión visual
-PENDIENTE DE APROBACIÓN VISUAL HUMANA.
+APROBADO COMO GLB CANDIDATO.
+
+Decisión del responsable:
+El responsable revisó el preview generado y aprobó el GLB como candidato
+para preparar integración React/Three.js con fallback.
 
 Regla:
 
@@ -50,16 +54,17 @@ No aprobar solo por validez técnica.
 No aprobar solo porque el GLB pesa poco.
 
 ## 5. Deudas visuales
-- preview generado, pero aprobación humana pendiente;
-- composición pendiente de revisión humana;
-- falta de aprobación explícita para copiar a `glb-approved/`;
-- GLB todavía no aprobado por responsable.
+- preview generado;
+- aprobación humana registrada;
+- GLB listo para copiarse a `glb-approved/`;
+- integración runtime sigue bloqueada hasta ticket posterior;
+- Estación II no finalizada.
 
 ## 6. Resultado de aprobación
-Si aprobado:
-
-  El GLB puede copiarse a `glb-approved/` en staging.
-  La integración runtime sigue bloqueada hasta ticket posterior.
+Resultado:
+El GLB puede copiarse a `glb-approved/` en staging.
+La integración runtime sigue bloqueada hasta ticket posterior.
+GLB aprobado en staging: SÍ.
 
 Si aprobado con deuda:
 
@@ -77,9 +82,8 @@ Si pendiente:
   Ejecutar revisión visual humana antes de avanzar.
 
 ## 7. Próximo paso
-Si aprobado o aprobado con deuda:
-
-  Abrir ticket para preparar integración React/Three.js con fallback.
+Próximo paso:
+abrir ticket para integración React/Three.js con fallback y validación móvil.
 
 Si rechazado:
 

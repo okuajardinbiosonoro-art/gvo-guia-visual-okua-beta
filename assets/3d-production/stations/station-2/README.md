@@ -14,7 +14,7 @@ Estado actual:
 - Implementación React final de Estación II: NO.
 - Implementación React/Three final con GLB: NO.
 - Implementación 3D final: NO.
-- No hay GLB.
+- No hay GLB runtime/final integrado.
 - No hay Estación II finalizada.
 - Deuda de optimización: PNG runtime de 2.160.381 bytes; considerar WebP futuro.
 - Slice React de validación aprobado por responsable: SÍ.
@@ -25,18 +25,19 @@ Estado actual:
 - `.blend` candidato registrado: SÍ.
 - GLB candidato registrado: SÍ.
 - Preview registrado: SÍ.
-- Revisión visual humana: PENDIENTE.
+- Revisión visual humana: SÍ.
 - Método de revisión: preview.
-- Decisión visual: PENDIENTE DE APROBACIÓN VISUAL HUMANA.
-- GLB aprobado por responsable: NO.
+- Decisión visual: APROBADO COMO GLB CANDIDATO.
+- GLB aprobado en staging: SÍ.
+- GLB aprobado por responsable: SÍ.
 - Integración runtime: NO.
 - Estación II finalizada: NO.
-- Blender: salida auditada; revisión humana pendiente.
+- Blender: salida auditada; GLB candidato aprobado.
 
 El slice React actual valida interacción, microcopy y secuencia por capas.
 No debe interpretarse como cierre visual final ni como sustituto del GLB.
 
 Dirección final: 3D (ADR-003).
-Próximo paso: revisión humana del preview/GLB candidato.
+Próximo paso: ticket de integración React/Three.js con fallback.
 
-La integración runtime sigue bloqueada hasta aprobación explícita y ticket posterior.
+La integración runtime sigue bloqueada hasta ese ticket posterior.
