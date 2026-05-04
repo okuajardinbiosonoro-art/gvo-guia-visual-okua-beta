@@ -21,12 +21,19 @@ Estado actual:
 - Validado en iPhone: SÍ.
 - Validado en PC: SÍ.
 - Decisión de validación: APROBADO CON DEUDA PARA PREPARAR HANDOFF A BLENDER.
-- Blender: habilitado solo para preparar handoff/prompt; no ejecutar sin ticket específico.
+- Salidas Blender auditadas: SÍ.
+- `.blend` candidato registrado: SÍ.
+- GLB candidato registrado: SÍ.
+- Preview registrado: NO.
+- GLB aprobado por responsable: NO.
+- Integración runtime: NO.
+- Estación II finalizada: NO.
+- Blender: salida auditada; revisión humana pendiente.
 
 El slice React actual valida interacción, microcopy y secuencia por capas.
 No debe interpretarse como cierre visual final ni como sustituto del GLB.
 
 Dirección final: 3D (ADR-003).
-Próximo paso: preparar handoff/prompt para Blender Python con base en el concept art aprobado y el slice React validado.
+Próximo paso: aprobación visual humana del GLB candidato.
 
-No pasar a Blender hasta validar el slice o hasta aprobación explícita.
+La integración runtime sigue bloqueada hasta aprobación explícita y ticket posterior.

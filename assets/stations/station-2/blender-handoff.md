@@ -92,3 +92,14 @@ No permitidas:
 □ Responsable aprueba visualmente.
 □ No hay lectura planta → música directa.
 □ Listo para abrir ticket React solo después de aprobación.
+
+## 8. Salidas Blender auditadas
+
+- `.blend` candidato: `assets/3d-production/stations/station-2/04-blender-source/station-2-bioelectric-mediation.blend`
+- `.glb` candidato: `assets/3d-production/stations/station-2/05-exports/glb-candidates/station-2-bioelectric-mediation-candidate.glb`
+- preview: `Preview pendiente de generación`
+- reporte: `assets/3d-production/stations/station-2/07-validation-notes/station-2-blender-output-audit.md`
+- decisión técnica: `CANDIDATO TÉCNICAMENTE ACEPTABLE PARA REVISIÓN HUMANA`
+- integración runtime: NO
+- GLB aprobado: NO
+- Estación II finalizada: NO
