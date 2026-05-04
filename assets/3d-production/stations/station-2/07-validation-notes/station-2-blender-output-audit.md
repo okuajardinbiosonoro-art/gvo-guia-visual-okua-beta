@@ -80,12 +80,13 @@ CANDIDATO TÉCNICAMENTE ACEPTABLE PARA REVISIÓN HUMANA.
 - Blender CLI disponible en `C:\Program Files\Blender Foundation\Blender 5.1\blender.exe`.
 - `.blend1` detectados como backups auxiliares.
 - GLB todavía no aprobado por responsable.
-- No hay integración runtime.
+- Integración runtime inicial registrada en la sección 10.
 
 ## 8. Próximo paso recomendado
 Abrir ticket de aprobación visual humana del GLB candidato.
 
-La integración runtime sigue prohibida hasta aprobación explícita y ticket posterior.
+La integración runtime ya fue iniciada y queda pendiente la validación móvil/lab
+antes del cierre de Estación II.
 
 ## 9. Revisión visual
 - Preview generado: SÍ.
@@ -102,3 +103,12 @@ La integración runtime sigue prohibida hasta aprobación explícita y ticket po
 
 La aprobación visual habilita preparar integración runtime en ticket posterior.
 No autoriza copiar el GLB a `apps/web/src/assets/3d/` dentro de este ticket.
+
+## 10. Integración runtime inicial
+- GLB copiado a runtime: SÍ.
+- Runtime path: `apps/web/src/assets/3d/stations/station-2/station-2-bioelectric-mediation.glb`.
+- Hash staging/runtime: `F52C8C93D653EAD077B36B10009089891FE7C08D4A418B294410357D7A7350DB`.
+- React/Three integration inicial: SÍ.
+- Fallback 2D: SÍ.
+- Validación móvil/lab runtime: PENDIENTE.
+- Estación II finalizada: NO.

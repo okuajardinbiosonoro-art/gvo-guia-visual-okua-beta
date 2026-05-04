@@ -14,7 +14,9 @@ Estado actual:
 - Implementación React final de Estación II: NO.
 - Implementación React/Three final con GLB: NO.
 - Implementación 3D final: NO.
-- No hay GLB runtime/final integrado.
+- GLB aprobado en staging: SÍ.
+- GLB runtime copiado: SÍ.
+- GLB runtime path: `apps/web/src/assets/3d/stations/station-2/station-2-bioelectric-mediation.glb`.
 - No hay Estación II finalizada.
 - Deuda de optimización: PNG runtime de 2.160.381 bytes; considerar WebP futuro.
 - Slice React de validación aprobado por responsable: SÍ.
@@ -28,16 +30,17 @@ Estado actual:
 - Revisión visual humana: SÍ.
 - Método de revisión: preview.
 - Decisión visual: APROBADO COMO GLB CANDIDATO.
-- GLB aprobado en staging: SÍ.
 - GLB aprobado por responsable: SÍ.
-- Integración runtime: NO.
+- Integración React/Three runtime inicial: SÍ.
+- Fallback 2D conservado: SÍ.
+- Validación móvil/lab runtime: PENDIENTE.
 - Estación II finalizada: NO.
-- Blender: salida auditada; GLB candidato aprobado.
+- Blender: salida auditada; GLB aprobado y copiado a runtime.
 
 El slice React actual valida interacción, microcopy y secuencia por capas.
 No debe interpretarse como cierre visual final ni como sustituto del GLB.
 
 Dirección final: 3D (ADR-003).
-Próximo paso: ticket de integración React/Three.js con fallback.
+Próximo paso: validación móvil/lab del runtime 3D de Estación II.
 
-La integración runtime sigue bloqueada hasta ese ticket posterior.
+La estación sigue sin declararse finalizada hasta esa validación.
