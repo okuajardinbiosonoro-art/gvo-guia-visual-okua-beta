@@ -5,7 +5,7 @@
 Concept art aprobado: SÍ.
 
 Estado: PENDIENTE DE APROBACIÓN VISUAL HUMANA.
-Aclaración: el slice React fue validado por el responsable en iPhone y PC, pero el GLB candidato todavía no tiene aprobación visual explícita.
+Aclaración: el slice React fue validado por el responsable en iPhone y PC, el preview ya fue generado con Blender CLI y el GLB candidato todavía no tiene aprobación visual explícita.
 La validación habilita preparar el prompt/script Blender, pero no autoriza ejecutar Blender, producir GLB final, declarar Estación II finalizada ni copiar GLB a runtime.
 No producir GLB todavía.
 
@@ -97,7 +97,7 @@ No permitidas:
 
 - `.blend` candidato: `assets/3d-production/stations/station-2/04-blender-source/station-2-bioelectric-mediation.blend`
 - `.glb` candidato: `assets/3d-production/stations/station-2/05-exports/glb-candidates/station-2-bioelectric-mediation-candidate.glb`
-- preview: `Preview pendiente de generación`
+- preview: `assets/3d-production/stations/station-2/06-previews/station-2-bioelectric-mediation-preview.png`
 - reporte: `assets/3d-production/stations/station-2/07-validation-notes/station-2-blender-output-audit.md`
 - decisión técnica: `CANDIDATO TÉCNICAMENTE ACEPTABLE PARA REVISIÓN HUMANA`
 - integración runtime: NO
@@ -106,9 +106,9 @@ No permitidas:
 
 ## 9. Revisión visual
 
-- preview: pendiente
-- método de revisión: pendiente
-- decisión visual: `PENDIENTE DE APROBACIÓN VISUAL HUMANA`
+- preview: SÍ
+- método de revisión: preview
+- decisión visual: PENDIENTE DE APROBACIÓN VISUAL HUMANA
 - GLB aprobado en staging: NO
 - integración runtime: NO
 - Estación II finalizada: NO

@@ -24,12 +24,12 @@ Archivos seleccionados:
 
 - `.blend`: `station-2-bioelectric-mediation.blend` / 317.110 bytes / `DBB609D1149C398471527124468555CFD9F707E4702EF8633FFA311A9B5E5196` / copiado sí
 - `.glb`: `station-2-bioelectric-mediation.glb` / 625.796 bytes / `F52C8C93D653EAD077B36B10009089891FE7C08D4A418B294410357D7A7350DB` / copiado sí
-- preview: pendiente de generación
+- preview: `station-2-bioelectric-mediation-preview.png` - 1.878.986 bytes / generado sí
 
 ## 3. Archivos copiados a staging
 - `.blend`: `assets/3d-production/stations/station-2/04-blender-source/station-2-bioelectric-mediation.blend`
 - `.glb`: `assets/3d-production/stations/station-2/05-exports/glb-candidates/station-2-bioelectric-mediation-candidate.glb`
-- preview: pendiente
+- preview: `assets/3d-production/stations/station-2/06-previews/station-2-bioelectric-mediation-preview.png`
 
 ## 4. Validación técnica GLB
 - magic GLB: válido
@@ -76,8 +76,8 @@ Revisión visual humana pendiente.
 CANDIDATO TÉCNICAMENTE ACEPTABLE PARA REVISIÓN HUMANA.
 
 ## 7. Deudas detectadas
-- Preview pendiente de generación.
-- Blender CLI no disponible en PATH para generar preview desde este entorno.
+- Preview generado.
+- Blender CLI disponible en `C:\Program Files\Blender Foundation\Blender 5.1\blender.exe`.
 - `.blend1` detectados como backups auxiliares.
 - GLB todavía no aprobado por responsable.
 - No hay integración runtime.
@@ -85,14 +85,12 @@ CANDIDATO TÉCNICAMENTE ACEPTABLE PARA REVISIÓN HUMANA.
 ## 8. Próximo paso recomendado
 Abrir ticket de aprobación visual humana del GLB candidato.
 
-Si el responsable solicita preview, generar ese artefacto en un ticket posterior.
-
 La integración runtime sigue prohibida hasta aprobación explícita y ticket posterior.
 
 ## 9. Revisión visual
-- Preview generado: NO.
-- Preview path: no aplica.
-- Método de revisión visual: pendiente.
+- Preview generado: SÍ.
+- Preview path: `assets/3d-production/stations/station-2/06-previews/station-2-bioelectric-mediation-preview.png`.
+- Método de revisión visual: preview.
 - Decisión visual: PENDIENTE DE APROBACIÓN VISUAL HUMANA.
 - GLB copiado a `glb-approved/`: NO.
 - Integración runtime: NO.
