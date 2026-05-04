@@ -3,7 +3,8 @@ import { useNavigate, useParams } from 'react-router-dom';
 import { Layout } from '../components/Layout';
 import { ContentRenderer } from '../components/ContentRenderer';
 import { StationHero } from '../components/StationHero';
-import { getStationContent } from '../lib/content';
+import { Station2ValidationSlice } from '../components/stations/Station2ValidationSlice';
+import { getStationContent, station2ValidationSliceSceneSrc } from '../lib/content';
 import { useJourney } from '../state/JourneyProvider';
 import { APP_MODE } from '../config';
 
@@ -71,6 +72,10 @@ export const StationScreen: FC = () => {
         </div>
 
         {content.visual && <StationHero visual={content.visual} />}
+
+        {stationId === 2 && (
+          <Station2ValidationSlice sceneSrc={station2ValidationSliceSceneSrc} />
+        )}
 
         <div className="screen-body">
           <ContentRenderer blocks={content.blocks} />

@@ -25,7 +25,7 @@ El concept art aprobado muestra una planta colgante, sensores y cables, un biono
 
 La lectura pedagógica es museográfica, técnica y cálida.
 La imagen funciona como referencia de interacción, no como runtime final.
-No sugiere planta -> música directa.
+No sugiere planta → música directa.
 La mediación debe ser visible.
 
 ## 4. Modelo de interacción
@@ -50,7 +50,7 @@ Estados de capa:
 ### Capa 1 — Planta viva
 Ícono: planta.
 Panel: planta / raíz / hoja.
-Animación: brillo sutil planta -> sensor.
+Animación: brillo sutil planta → sensor.
 Lía: se acerca a la planta. Estado: curious.
 Microcopy: "Primero está la planta. No es un adorno: es un ser vivo con actividad que normalmente no percibimos."
 
@@ -64,7 +64,7 @@ Microcopy: "Esta variación representa una señal bioeléctrica. Existe, pero to
 ### Capa 3 — Captura / bionosificador
 Ícono: circuito.
 Panel: captura de señal.
-Animación: flujo planta -> bionosificador.
+Animación: flujo planta → bionosificador.
 Lía: se aproxima al circuito. Estado: curious.
 Microcopy: "El bionosificador capta esa señal y la lleva a una forma que el sistema puede leer."
 
@@ -191,7 +191,7 @@ Documento de decisión:
 □ Decisión de implementación tomada por el responsable.
 □ Anclas visuales aproximadas definidas.
 □ Elementos 3D definidos: qué va a GLB y qué va a overlay.
-□ Sin riesgo de planta -> música directa.
+□ Sin riesgo de planta → música directa.
 □ Blender-handoff actualizado como LISTO.
 
 Mientras no se cumplan estos criterios: Blender = NO LISTO.

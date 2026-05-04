@@ -10,9 +10,11 @@ Estado actual:
 - Hay documento de interacción creado (GVO-3D-07).
 - Decisión de implementación tomada: Opción B.
 - Opción B = slice de validación 2D previo al GLB.
+- Slice React de validación implementado: SÍ.
 - No hay GLB.
 - No hay implementación React.
 - No hay Estación II finalizada.
+- Deuda de optimización: PNG runtime ~2.06 MB; considerar WebP futuro.
 
 Dirección final: 3D (ADR-003).
 Próximo paso: ticket de implementación del slice de validación.

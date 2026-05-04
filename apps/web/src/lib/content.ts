@@ -16,6 +16,7 @@ import {
 } from '@content/stations';
 import heroStation2 from '../assets/stations/station-2/diagram-bioelectric-chain.svg';
 import heroStation5 from '../assets/stations/station-5/hero-current-montage.webp';
+import station2ConceptApproved from '../assets/stations/station-2/station-2-concept-approved.png';
 
 export type { IntroContent, StationContent };
 
@@ -23,6 +24,7 @@ export type { IntroContent, StationContent };
 //
 // Assets integrados en esta versión:
 //   station-2 → diagram-bioelectric-chain.svg  ✓  F8-02
+//   station-2 validation slice → station-2-concept-approved.png
 //   station-5 → hero-current-montage.webp      ✓  F8-03
 //
 // Patrón para agregar un asset nuevo:
@@ -98,3 +100,5 @@ export function getIntroContent(): IntroContent {
 export function getStationContent(id: number): StationContent | undefined {
   return STATIONS.find((s) => s.id === id);
 }
+
+export const station2ValidationSliceSceneSrc = station2ConceptApproved;
