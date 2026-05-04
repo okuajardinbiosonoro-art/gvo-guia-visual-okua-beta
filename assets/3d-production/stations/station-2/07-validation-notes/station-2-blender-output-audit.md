@@ -77,6 +77,7 @@ CANDIDATO TÉCNICAMENTE ACEPTABLE PARA REVISIÓN HUMANA.
 
 ## 7. Deudas detectadas
 - Preview pendiente de generación.
+- Blender CLI no disponible en PATH para generar preview desde este entorno.
 - `.blend1` detectados como backups auxiliares.
 - GLB todavía no aprobado por responsable.
 - No hay integración runtime.
@@ -87,3 +88,12 @@ Abrir ticket de aprobación visual humana del GLB candidato.
 Si el responsable solicita preview, generar ese artefacto en un ticket posterior.
 
 La integración runtime sigue prohibida hasta aprobación explícita y ticket posterior.
+
+## 9. Revisión visual
+- Preview generado: NO.
+- Preview path: no aplica.
+- Método de revisión visual: pendiente.
+- Decisión visual: PENDIENTE DE APROBACIÓN VISUAL HUMANA.
+- GLB copiado a `glb-approved/`: NO.
+- Integración runtime: NO.
+- Estación II finalizada: NO.

@@ -4,8 +4,8 @@
 
 Concept art aprobado: SÍ.
 
-Estado: LISTO PARA PREPARAR HANDOFF A BLENDER.
-Aclaración: el slice React fue validado por el responsable en iPhone y PC.
+Estado: PENDIENTE DE APROBACIÓN VISUAL HUMANA.
+Aclaración: el slice React fue validado por el responsable en iPhone y PC, pero el GLB candidato todavía no tiene aprobación visual explícita.
 La validación habilita preparar el prompt/script Blender, pero no autoriza ejecutar Blender, producir GLB final, declarar Estación II finalizada ni copiar GLB a runtime.
 No producir GLB todavía.
 
@@ -102,4 +102,13 @@ No permitidas:
 - decisión técnica: `CANDIDATO TÉCNICAMENTE ACEPTABLE PARA REVISIÓN HUMANA`
 - integración runtime: NO
 - GLB aprobado: NO
+- Estación II finalizada: NO
+
+## 9. Revisión visual
+
+- preview: pendiente
+- método de revisión: pendiente
+- decisión visual: `PENDIENTE DE APROBACIÓN VISUAL HUMANA`
+- GLB aprobado en staging: NO
+- integración runtime: NO
 - Estación II finalizada: NO

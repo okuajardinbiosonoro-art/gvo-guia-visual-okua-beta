@@ -25,6 +25,9 @@ Estado actual:
 - `.blend` candidato registrado: SÍ.
 - GLB candidato registrado: SÍ.
 - Preview registrado: NO.
+- Revisión visual humana: PENDIENTE.
+- Método de revisión: pendiente.
+- Decisión visual: PENDIENTE DE APROBACIÓN VISUAL HUMANA.
 - GLB aprobado por responsable: NO.
 - Integración runtime: NO.
 - Estación II finalizada: NO.
@@ -34,6 +37,6 @@ El slice React actual valida interacción, microcopy y secuencia por capas.
 No debe interpretarse como cierre visual final ni como sustituto del GLB.
 
 Dirección final: 3D (ADR-003).
-Próximo paso: aprobación visual humana del GLB candidato.
+Próximo paso: revisión visual humana del GLB candidato.
 
 La integración runtime sigue bloqueada hasta aprobación explícita y ticket posterior.
