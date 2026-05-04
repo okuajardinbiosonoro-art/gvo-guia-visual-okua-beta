@@ -19,7 +19,7 @@ GLB: no.
 
 Three.js adicional: no.
 
-Blender: no listo.
+Blender: no ejecutado.
 
 QR/sesión/secuencia: sin tocar.
 
@@ -38,17 +38,27 @@ QR/sesión/secuencia: sin tocar.
 □ No hay lectura planta → música directa.
 
 ## 4. Checklist móvil
-Dispositivo: pendiente de validación humana.
+Dispositivo:
+- iPhone.
+- PC.
 
-Navegador: pendiente de validación humana.
+Navegador:
+- iPhone: no especificado.
+- PC: no especificado.
 
 Fecha: 2026-05-04.
 
-Resultado visual: pendiente de validación humana.
+Resultado visual:
+- El responsable verificó que el slice se ve bien en iPhone.
+- El responsable verificó que el slice se ve bien en PC.
+- No se reportaron problemas visuales bloqueantes.
+- No se reportaron problemas de navegación bloqueantes.
 
-Problemas detectados: deuda de optimización del PNG runtime y verificación móvil todavía no registrada por responsable.
+Problemas detectados:
+- Deuda de optimización del PNG runtime.
+- No se reportaron ajustes bloqueantes de layout, microcopy o interacción.
 
-Decisión: PENDIENTE DE VALIDACIÓN HUMANA.
+Decisión: APROBADO CON DEUDA PARA PREPARAR HANDOFF A BLENDER.
 
 Criterios mínimos:
 □ Legible en pantalla pequeña.
@@ -68,13 +78,25 @@ Considerar WebP futuro antes de campo o antes de cerrar la capa visual final.
 También pueden quedar ajustes menores de layout, microcopy, timing, contraste o tamaño táctil si la validación móvil los revela.
 
 ## 6. Decisión
-PENDIENTE DE VALIDACIÓN HUMANA.
+APROBADO CON DEUDA PARA PREPARAR HANDOFF A BLENDER.
 
-No se declara aprobado para handoff a Blender sin confirmación explícita del responsable en móvil o laboratorio.
+La deuda pendiente es la optimización del PNG runtime antes de campo o antes de cierre visual final. Esta deuda no bloquea la preparación del handoff a Blender, porque el slice ya validó interacción, microcopy y secuencia base según confirmación del responsable en iPhone y PC.
+
+Este slice no finaliza Estación II.
+Este slice no reemplaza el GLB.
+No se declara Estación II finalizada.
+No se declara GLB aprobado.
+No se declara implementación 3D final.
 
 ## 7. Siguiente paso recomendado
-Ejecutar validación móvil real con responsable humano.
+Preparar handoff/prompt para Blender Python usando el slice validado como contrato de interacción, microcopy y secuencia.
 
-Si el resultado es positivo, registrar `APROBADO PARA HANDOFF A BLENDER` o `APROBADO CON DEUDA PARA HANDOFF A BLENDER` en una revisión posterior.
-
-Si la experiencia falla en legibilidad, interacción o comprensión, abrir ticket de ajuste React antes de pasar a Blender.
+La producción Blender debe respetar:
+- las 6 capas validadas;
+- la línea narrativa señal viva ≠ música directa;
+- Lía como guía única;
+- cero audio;
+- cero AR;
+- cero scanner QR interno;
+- mobile-first;
+- fallback del slice mientras no exista GLB aprobado.

@@ -4,10 +4,18 @@
 
 Concept art aprobado: SÍ.
 
-Estado: NO LISTO PARA BLENDER TODAVÍA.
-Motivo: se eligió Opción B como slice de validación previo al GLB.
-Blender queda pendiente hasta validar la base interactiva y actualizar este handoff como LISTO.
+Estado: LISTO PARA PREPARAR HANDOFF A BLENDER.
+Aclaración: el slice React fue validado por el responsable en iPhone y PC.
+La validación habilita preparar el prompt/script Blender, pero no autoriza ejecutar Blender, producir GLB final, declarar Estación II finalizada ni copiar GLB a runtime.
 No producir GLB todavía.
+
+Base validada:
+- Concept art aprobado.
+- Documento de interacción.
+- Opción B registrada.
+- Slice React de validación implementado.
+- Validación humana en iPhone y PC.
+- Deuda PNG runtime registrada.
 
 Decisión responsable: Opción B — slice de validación 2D previo al GLB.
 Esta decisión no cierra Estación II.
@@ -19,6 +27,8 @@ Documento de interacción creado:
 
 La decisión técnica de implementación ya quedó registrada como Opción B.
 Ver la sección 10 del documento de interacción y el plan de slice de validación.
+
+Próximo: generar prompt para chat Blender Python o ticket de generación de script Blender. No ejecutar Blender todavía si no existe script aprobado.
 
 ## 2. Asset final esperado
 

@@ -17,11 +17,16 @@ Estado actual:
 - No hay GLB.
 - No hay Estación II finalizada.
 - Deuda de optimización: PNG runtime de 2.160.381 bytes; considerar WebP futuro.
+- Slice React de validación aprobado por responsable: SÍ.
+- Validado en iPhone: SÍ.
+- Validado en PC: SÍ.
+- Decisión de validación: APROBADO CON DEUDA PARA PREPARAR HANDOFF A BLENDER.
+- Blender: habilitado solo para preparar handoff/prompt; no ejecutar sin ticket específico.
 
 El slice React actual valida interacción, microcopy y secuencia por capas.
 No debe interpretarse como cierre visual final ni como sustituto del GLB.
 
 Dirección final: 3D (ADR-003).
-Próximo paso: validación móvil/laboratorio del slice y decisión humana antes de abrir handoff a Blender/GLB.
+Próximo paso: preparar handoff/prompt para Blender Python con base en el concept art aprobado y el slice React validado.
 
 No pasar a Blender hasta validar el slice o hasta aprobación explícita.
