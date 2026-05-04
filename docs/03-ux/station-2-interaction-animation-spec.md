@@ -21,19 +21,19 @@ Blender: NO LISTO.
 ADR-003: pipeline 3D habilitado.
 
 ## 3. Lectura pedagógica del concept art
-El concept art aprobado muestra una planta colgante, sensores y cables, un bionosificador o circuito dentro de una caja transparente, seis paneles laterales, seis iconos inferiores y Lía como guía visual.
+El concept art aprobado muestra una planta colgante, sensores y cables, un bionosificador o circuito dentro de una caja transparente, seis paneles laterales, seis íconos inferiores y Lía como guía visual.
 
 La lectura pedagógica es museográfica, técnica y cálida.
 La imagen funciona como referencia de interacción, no como runtime final.
-No sugiere planta -> musica directa.
-La mediacion debe ser visible.
+No sugiere planta -> música directa.
+La mediación debe ser visible.
 
 ## 4. Modelo de interacción
 El modelo de interacción es tap-a-tap.
 La primera pasada es secuencial y obligatoria.
 La revisión libre solo se habilita después de completar la estación.
 
-Los iconos inferiores sirven como navegación por capas.
+Los íconos inferiores sirven como navegación por capas.
 Los paneles sirven como feedback visual y narrativo.
 No hay escritura, no hay audio, no hay AR y no hay hover obligatorio.
 La experiencia debe seguir siendo legible en móvil pequeño.
@@ -132,7 +132,7 @@ Animaciones sugeridas:
 - cierre de estación.
 
 Puede resolverse con React + CSS / SVG:
-- activación de iconos;
+- activación de íconos;
 - brillo de panel;
 - líneas animadas;
 - microcopy;
@@ -170,20 +170,28 @@ Consideración: agrega un paso intermedio que no es el resultado final.
 Requiere que el responsable lo entienda como validación, no como destino.
 
 OPCIÓN C — Híbrida:
-Implementar con overlays CSS / Canvas los elementos animados más livianos (señal, capas) y reservar el GLB de Blender para Lía 3D y el volumen del bionosificador.
+Implementar con overlays CSS / Canvas los elementos animados más livianos (señal, capas) y reservar el GLB de Blender solo para Lía 3D y el volumen del bionosificador.
 
-Decisión pendiente:
-El responsable debe elegir la opción después de revisar este documento.
-Ninguna implementación puede comenzar hasta esa decisión.
+Decisión del responsable:
+Se elige la OPCIÓN B — Slice de validación 2D previo al GLB.
 
-Referencia: `docs/05-adr/ADR-003-v1-3d-experience-pipeline.md`
+Esta decisión habilita un ticket posterior para implementar una base interactiva con React + imagen 2D aprobada + overlays SVG/CSS.
+
+Esta base no finaliza Estación II.
+Esta base no reemplaza la implementación 3D.
+Esta base sirve para validar interacción, microcopy, secuencia y estados antes de producir el GLB en Blender.
+
+La dirección final sigue siendo 3D según ADR-003.
+
+Documento de decisión:
+`docs/03-ux/station-2-option-b-validation-slice-plan.md`
 
 ## 11. Criterios para pasar a Blender
 □ Este documento aprobado por el responsable.
 □ Decisión de implementación tomada por el responsable.
 □ Anclas visuales aproximadas definidas.
 □ Elementos 3D definidos: qué va a GLB y qué va a overlay.
-□ Sin riesgo de planta -> musica directa.
+□ Sin riesgo de planta -> música directa.
 □ Blender-handoff actualizado como LISTO.
 
 Mientras no se cumplan estos criterios: Blender = NO LISTO.

@@ -5,14 +5,20 @@
 Concept art aprobado: SÍ.
 
 Estado: NO LISTO PARA BLENDER TODAVÍA.
-Motivo: falta aprobación del documento de interacción GVO-3D-07 por el responsable, y decisión de opción de implementación.
+Motivo: se eligió Opción B como slice de validación previo al GLB.
+Blender queda pendiente hasta validar la base interactiva y actualizar este handoff como LISTO.
 No producir GLB todavía.
+
+Decisión responsable: Opción B — slice de validación 2D previo al GLB.
+Esta decisión no cierra Estación II.
+Esta decisión no reemplaza el pipeline Blender → GLB → Three.js.
+Referencia: `docs/03-ux/station-2-option-b-validation-slice-plan.md`
 
 Documento de interacción creado:
 - `docs/03-ux/station-2-interaction-animation-spec.md`
 
-La decisión técnica de implementación (directo 3D, slice 2D de validación u opción híbrida) sigue pendiente de decisión del responsable.
-Ver sección 10 del documento de interacción.
+La decisión técnica de implementación ya quedó registrada como Opción B.
+Ver la sección 10 del documento de interacción y el plan de slice de validación.
 
 ## 2. Asset final esperado
 
@@ -32,7 +38,7 @@ Antes de abrir Blender se debe cerrar:
 - documento de interacción de Estación II;
 - definición de anclas de paneles;
 - comportamiento de Lía por capa;
-- decisión sobre si la primera implementación será 2D overlay, híbrida o GLB.
+- decisión sobre el slice de validación y su paso a Blender.
 
 ## 4. Restricciones narrativas
 

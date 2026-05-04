@@ -8,12 +8,13 @@ Estado actual:
 - Hay brief de producción.
 - Hay concept art aprobado.
 - Hay documento de interacción creado (GVO-3D-07).
-- Falta aprobación humana del documento de interacción.
-- Decisión de opción de implementación: pendiente del responsable.
+- Decisión de implementación tomada: Opción B.
+- Opción B = slice de validación 2D previo al GLB.
 - No hay GLB.
 - No hay implementación React.
+- No hay Estación II finalizada.
 
 Dirección final: 3D (ADR-003).
-Opciones de secuenciación: ver sección 10 del spec de interacción.
+Próximo paso: ticket de implementación del slice de validación.
 
-No pasar a Blender hasta que el responsable apruebe la interacción.
+No pasar a Blender hasta validar el slice o hasta aprobación explícita.
