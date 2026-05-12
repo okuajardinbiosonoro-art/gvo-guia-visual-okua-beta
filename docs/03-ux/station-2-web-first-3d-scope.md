@@ -98,3 +98,12 @@ La Estación II podrá abrir ticket de cierre solo si:
 ## 8. Próximo paso
 
 Abrir ticket de pulido visual 3D web-first para Estación II.
+
+## 9. Implementación inicial del pulido
+
+GVO-3D-21 implementa una primera capa de pulido 3D web-first en:
+`apps/web/src/components/stations/Station2SpatialOverlay.tsx`
+
+Esta implementación agrega overlays SVG/DOM, foco por capa y profundidad visual
+controlada. No cambia los criterios de cierre: requiere QA humano posterior con
+evidencia en iPhone y PC.

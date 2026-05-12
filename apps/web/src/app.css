@@ -631,6 +631,8 @@ body {
 }
 
 .station-2-slice-image-wrap {
+  position: relative;
+  isolation: isolate;
   overflow: hidden;
   border: 1px solid var(--color-border);
   border-radius: var(--radius-md);
@@ -639,6 +641,8 @@ body {
 }
 
 .station-2-slice-image {
+  position: relative;
+  z-index: 1;
   display: block;
   width: 100%;
   height: auto;
@@ -656,6 +660,188 @@ body {
   background: var(--color-surface);
 }
 
+.station-2-spatial-overlay {
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+  pointer-events: none;
+  color: var(--color-accent-strong);
+  transform-origin: center;
+  will-change: transform, opacity;
+}
+
+.station-2-spatial-depth {
+  position: absolute;
+  inset: 5%;
+  border: 1px solid color-mix(in srgb, var(--color-accent) 42%, transparent);
+  border-radius: var(--radius-lg);
+  background:
+    radial-gradient(
+      circle at 22% 32%,
+      color-mix(in srgb, var(--color-amber-glow) 22%, transparent),
+      transparent 30%
+    ),
+    linear-gradient(
+      135deg,
+      color-mix(in srgb, var(--color-surface) 18%, transparent),
+      color-mix(in srgb, var(--color-accent) 10%, transparent)
+    );
+  box-shadow:
+    inset 0 0 0 1px color-mix(in srgb, var(--color-bg) 46%, transparent),
+    0 1rem 2rem color-mix(in srgb, var(--color-text) 10%, transparent);
+  opacity: 0.82;
+  transform-origin: center;
+  will-change: transform, opacity;
+}
+
+.station-2-spatial-layer {
+  position: absolute;
+  display: grid;
+  place-items: center;
+  border: 1px solid color-mix(in srgb, currentColor 36%, transparent);
+  border-radius: var(--radius-lg);
+  background: color-mix(in srgb, var(--color-bg) 76%, transparent);
+  box-shadow: var(--shadow-md);
+  opacity: 0.94;
+  transform-origin: center;
+  will-change: opacity;
+}
+
+.station-2-spatial-focus {
+  outline: 1px solid color-mix(in srgb, currentColor 28%, transparent);
+  outline-offset: 0.16rem;
+}
+
+.station-2-spatial-layer-1 {
+  inset: 19% 48% 37% 9%;
+  color: var(--color-ok);
+}
+
+.station-2-spatial-layer-2 {
+  inset: 15% 9% 55% 28%;
+  color: var(--color-accent-strong);
+}
+
+.station-2-spatial-layer-3 {
+  inset: 34% 10% 27% 35%;
+  color: var(--color-accent-strong);
+}
+
+.station-2-spatial-layer-4 {
+  inset: 51% 17% 13% 14%;
+  color: var(--color-amber);
+}
+
+.station-2-spatial-layer-5 {
+  inset: 19% 17% 36% 44%;
+  color: var(--color-accent);
+}
+
+.station-2-spatial-layer-6 {
+  inset: 46% 8% 10% 45%;
+  color: var(--color-ok);
+}
+
+.station-2-spatial-svg {
+  width: 100%;
+  height: 100%;
+  overflow: visible;
+}
+
+.station-2-spatial-anchor,
+.station-2-spatial-dot,
+.station-2-spatial-node {
+  fill: var(--color-bg);
+  stroke: currentColor;
+  stroke-width: 2.2;
+}
+
+.station-2-spatial-ring {
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 1.8;
+  opacity: 0.68;
+}
+
+.station-2-spatial-chip,
+.station-2-spatial-module {
+  fill: color-mix(in srgb, var(--color-bg) 78%, transparent);
+  stroke: currentColor;
+  stroke-width: 2;
+}
+
+.station-2-spatial-connector,
+.station-2-spatial-flow,
+.station-2-spatial-circuit,
+.station-2-spatial-signal,
+.station-2-spatial-gate,
+.station-2-spatial-map-link,
+.station-2-spatial-result,
+.station-2-spatial-result-secondary {
+  fill: none;
+  stroke: currentColor;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  vector-effect: non-scaling-stroke;
+}
+
+.station-2-spatial-connector,
+.station-2-spatial-flow,
+.station-2-spatial-map-link,
+.station-2-spatial-result,
+.station-2-spatial-result-secondary {
+  stroke-width: 3;
+}
+
+.station-2-spatial-signal {
+  stroke-width: 2.8;
+  stroke-dasharray: 1;
+  stroke-dashoffset: 0;
+}
+
+.station-2-spatial-raw-line {
+  opacity: 0.58;
+}
+
+.station-2-spatial-clean-line {
+  opacity: 0.9;
+}
+
+.station-2-spatial-gate {
+  stroke: var(--color-border-strong);
+  stroke-width: 2.5;
+}
+
+.station-2-spatial-circuit {
+  stroke-width: 2;
+}
+
+.station-2-spatial-result-secondary {
+  opacity: 0.62;
+}
+
+.station-2-spatial-review {
+  position: absolute;
+  right: var(--space-sm);
+  bottom: var(--space-sm);
+  display: flex;
+  gap: 0.28rem;
+  padding: 0.35rem 0.42rem;
+  border: 1px solid color-mix(in srgb, var(--color-ok) 52%, transparent);
+  border-radius: 999px;
+  background: color-mix(in srgb, var(--color-bg) 82%, transparent);
+  box-shadow: var(--shadow-sm);
+  transform-origin: center;
+  will-change: transform, opacity;
+}
+
+.station-2-spatial-review span {
+  width: 0.34rem;
+  height: 0.34rem;
+  border-radius: 999px;
+  background: var(--color-ok);
+}
+
 .station-2-lia-card {
   display: grid;
   grid-template-columns: auto 1fr;
@@ -669,7 +855,10 @@ body {
 
 .station-2-lia-card,
 .station-2-layer-button-active,
-.station-2-panel-active {
+.station-2-panel-active,
+.station-2-spatial-overlay,
+.station-2-spatial-depth,
+.station-2-spatial-layer {
   will-change: transform, opacity;
 }
 
@@ -857,7 +1046,11 @@ body {
 
   .station-2-lia-card,
   .station-2-layer-button-active,
-  .station-2-panel-active {
+  .station-2-panel-active,
+  .station-2-spatial-overlay,
+  .station-2-spatial-depth,
+  .station-2-spatial-layer,
+  .station-2-spatial-review {
     will-change: auto;
   }
 }

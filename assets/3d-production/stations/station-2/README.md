@@ -37,9 +37,14 @@ Estado actual:
 - Evidencia visual path: `assets/3d-production/stations/station-2/06-previews/station-2-motion-pass-evidence.mp4`.
 - Reduced-motion validado explícitamente: SÍ.
 - Decisión QA final: APROBADO FUNCIONALMENTE, NO LISTO PARA CIERRE.
-- Alcance 3D web-first: PENDIENTE.
-- Pulido visual 3D web-first: PENDIENTE.
-- Cierre de Estación II: BLOQUEADO hasta completar acabado 3D web-first.
+- Alcance 3D web-first: DEFINIDO.
+- Pulido visual 3D web-first: IMPLEMENTADO.
+- Overlays por capa: SÍ.
+- Profundidad visual web-first: SÍ.
+- Foco visual por capa: SÍ.
+- Movimiento de Lía conectado: PARCIAL.
+- Reduced-motion equivalente: SOPORTADO.
+- Cierre de Estación II: BLOQUEADO hasta QA humano del pulido 3D web-first.
 - GSAP/Motion alternativo: NO INSTALADO.
 - Concept art aprobado: CONSERVADO.
 - Imagen runtime del slice: CONSERVADA.
@@ -66,9 +71,10 @@ visual final. Fue validado funcionalmente por el responsable en iPhone y PC.
 El QA final registró evidencia visual real y validación explícita de
 reduced-motion en iPhone. Esa validación aprueba el funcionamiento, pero no
 autoriza cierre: falta completar el acabado 3D web-first, la profundidad visual
-y las animaciones esperadas.
+y las animaciones esperadas. GVO-3D-21 implementa una primera capa de pulido
+web-first con overlays SVG/DOM, foco por capa y profundidad visual controlada.
 
 Blender/GLB queda pausado como apoyo visual futuro y no como núcleo de implementación.
 No usar los binarios retirados para runtime.
 
-Próximo paso: pulido visual 3D web-first.
+Próximo paso: QA humano final del pulido 3D web-first con evidencia.

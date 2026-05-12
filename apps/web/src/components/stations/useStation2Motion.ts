@@ -44,6 +44,21 @@ const useStation2Motion = ({
       const signalTrace = root.querySelector<HTMLElement>(
         '[data-station2-layer-id="2"][data-station2-motion-cue="signal_trace"]',
       );
+      const spatialOverlay = root.querySelector<HTMLElement>(
+        '[data-station2-spatial-overlay]',
+      );
+      const spatialFocus = root.querySelector<HTMLElement>(
+        '[data-station2-spatial-focus]',
+      );
+      const spatialSignal = root.querySelector<Element>(
+        '[data-station2-spatial-signal]',
+      );
+      const spatialDepth = root.querySelector<HTMLElement>(
+        '[data-station2-spatial-depth]',
+      );
+      const spatialReview = root.querySelector<HTMLElement>(
+        '.station-2-spatial-review',
+      );
       const reviewButtons = Array.from(
         root.querySelectorAll<HTMLElement>('.station-2-layer-button'),
       );
@@ -55,10 +70,15 @@ const useStation2Motion = ({
           activeButton,
           liaCard,
           signalTrace,
-        ].filter((target): target is HTMLElement => target !== null);
+          spatialOverlay,
+          spatialFocus,
+          spatialSignal,
+          spatialDepth,
+          spatialReview,
+        ].filter((target): target is Element => target !== null);
 
         gsap.set(reducedMotionTargets, {
-          clearProps: 'transform,opacity,visibility',
+          clearProps: 'transform,opacity,visibility,strokeDashoffset',
         });
         return;
       }
@@ -93,6 +113,33 @@ const useStation2Motion = ({
         );
       }
 
+      if (spatialDepth) {
+        timeline.fromTo(
+          spatialDepth,
+          { opacity: 0.48, scale: 0.99 },
+          { opacity: 1, scale: 1, duration: 0.32, ease: 'power2.out' },
+          0.01,
+        );
+      }
+
+      if (spatialOverlay) {
+        timeline.fromTo(
+          spatialOverlay,
+          { opacity: 0.65, scale: 0.985 },
+          { opacity: 1, scale: 1, duration: 0.3, ease: 'power2.out' },
+          0.03,
+        );
+      }
+
+      if (spatialFocus) {
+        timeline.fromTo(
+          spatialFocus,
+          { opacity: 0.6 },
+          { opacity: 1, duration: 0.25, ease: 'power1.out' },
+          0.05,
+        );
+      }
+
       if (liaCard) {
         timeline.fromTo(
           liaCard,
@@ -111,6 +158,20 @@ const useStation2Motion = ({
         );
       }
 
+      if (activeLayerId === 2 && spatialSignal) {
+        timeline.fromTo(
+          spatialSignal,
+          { opacity: 0.58, strokeDashoffset: 1 },
+          {
+            opacity: 1,
+            strokeDashoffset: 0,
+            duration: 0.45,
+            ease: 'power1.inOut',
+          },
+          0.06,
+        );
+      }
+
       if (shouldPlayReviewUnlock && reviewButtons.length > 0) {
         timeline.fromTo(
           reviewButtons,
@@ -123,6 +184,15 @@ const useStation2Motion = ({
             stagger: { each: 0.035, from: 'start' },
           },
           0,
+        );
+      }
+
+      if (shouldPlayReviewUnlock && spatialReview) {
+        timeline.fromTo(
+          spatialReview,
+          { opacity: 0.6, scale: 0.96 },
+          { opacity: 1, scale: 1, duration: 0.26, ease: 'power2.out' },
+          0.08,
         );
       }
     }, root);

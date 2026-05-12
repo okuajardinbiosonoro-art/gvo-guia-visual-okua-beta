@@ -9,6 +9,7 @@ import {
   selectStation2Layer,
   type Station2LayerStatus,
 } from './station2InteractionContract';
+import { Station2SpatialOverlay } from './Station2SpatialOverlay';
 import { useStation2Motion } from './useStation2Motion';
 
 type Props = {
@@ -118,12 +119,19 @@ const Station2ValidationSlice: FC<Props> = ({ sceneSrc }) => {
               </p>
             </div>
           ) : (
-            <img
-              className="station-2-slice-image"
-              src={sceneSrc}
-              alt="Concept art de Estación II usado como base de validación de interacción"
-              onError={() => setImageFailed(true)}
-            />
+            <>
+              <img
+                className="station-2-slice-image"
+                src={sceneSrc}
+                alt="Concept art de Estación II usado como base de validación de interacción"
+                onError={() => setImageFailed(true)}
+              />
+              <Station2SpatialOverlay
+                activeLayerId={interactionState.activeLayerId}
+                activeLayer={activeLayer}
+                reviewUnlocked={interactionState.reviewUnlocked}
+              />
+            </>
           )}
         </div>
 
