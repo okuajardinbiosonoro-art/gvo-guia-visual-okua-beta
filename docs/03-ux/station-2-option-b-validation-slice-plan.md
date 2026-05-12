@@ -119,3 +119,9 @@ Riesgos principales:
 □ Relación con GLB futuro clara.
 □ Gates React y Blender claros.
 □ No se modifica runtime, no se crea React, no se crea GLB.
+
+## 13. Actualización metodológica
+
+El slice de validación se convierte en base principal de la nueva ruta
+web-first 2.5D. Blender/GLB deja de ser el carril principal hasta que el
+comportamiento interactivo esté completamente cerrado y aprobado en navegador.

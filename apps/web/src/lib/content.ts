@@ -17,7 +17,6 @@ import {
 import heroStation2 from '../assets/stations/station-2/diagram-bioelectric-chain.svg';
 import heroStation5 from '../assets/stations/station-5/hero-current-montage.webp';
 import station2ConceptApproved from '../assets/stations/station-2/station-2-concept-approved.png';
-import station2BioelectricMediationGlbSrc from '../assets/3d/stations/station-2/station-2-bioelectric-mediation.glb?url';
 
 export type { IntroContent, StationContent };
 
@@ -103,4 +102,3 @@ export function getStationContent(id: number): StationContent | undefined {
 }
 
 export const station2ValidationSliceSceneSrc = station2ConceptApproved;
-export const station2BioelectricMediationSceneSrc = station2BioelectricMediationGlbSrc;

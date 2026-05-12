@@ -223,3 +223,9 @@ Estación II no debe reemplazar `SignalFlowDiagram`.
 □ Diferencia con Estación IV explícita.
 □ Blender y React marcados como NO LISTO hasta aprobación.
 □ Sin modificar runtime.
+
+## 15. Actualización metodológica
+
+El slice de validación se convierte en base principal de la nueva ruta
+web-first 2.5D. Blender/GLB deja de ser el carril principal hasta que el
+comportamiento interactivo esté completamente cerrado y aprobado en navegador.

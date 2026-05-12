@@ -3,12 +3,9 @@ import { useNavigate, useParams } from 'react-router-dom';
 import { Layout } from '../components/Layout';
 import { ContentRenderer } from '../components/ContentRenderer';
 import { StationHero } from '../components/StationHero';
-import { Station3DHost } from '../components/three/Station3DHost';
-import { Station2BioelectricScene } from '../components/stations/Station2BioelectricScene';
 import { Station2ValidationSlice } from '../components/stations/Station2ValidationSlice';
 import {
   getStationContent,
-  station2BioelectricMediationSceneSrc,
   station2ValidationSliceSceneSrc,
 } from '../lib/content';
 import { useJourney } from '../state/JourneyProvider';
@@ -22,9 +19,6 @@ export const StationScreen: FC = () => {
 
   const stationId = Number(id);
   const content = getStationContent(stationId);
-  const station2Fallback = (
-    <Station2ValidationSlice sceneSrc={station2ValidationSliceSceneSrc} />
-  );
 
   useEffect(() => {
     setReady(false);
@@ -83,16 +77,7 @@ export const StationScreen: FC = () => {
         {content.visual && <StationHero visual={content.visual} />}
 
         {stationId === 2 && (
-          <Station3DHost
-            stationId={stationId}
-            fallback={station2Fallback}
-            scene={
-              <Station2BioelectricScene
-                glbSrc={station2BioelectricMediationSceneSrc}
-                fallback={station2Fallback}
-              />
-            }
-          />
+          <Station2ValidationSlice sceneSrc={station2ValidationSliceSceneSrc} />
         )}
 
         <div className="screen-body">

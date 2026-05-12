@@ -1,5 +1,11 @@
 # Estación II — Auditoría de salidas Blender/GLB
 
+Estado documental: OBSOLETO.
+
+Este reporte queda como antecedente histórico. La ruta Blender/GLB fue retirada
+como carril principal de Estación II en GVO-3D-15-R1. No usar estos resultados
+como autorización vigente de runtime.
+
 ## 1. Propósito
 Auditar técnicamente las salidas generadas en Blender para Estación II.
 

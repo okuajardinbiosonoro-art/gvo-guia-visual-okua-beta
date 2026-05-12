@@ -831,65 +831,6 @@ body {
   text-align: center;
 }
 
-/* ─── Station 2 3D scene ─────────────────────────────────────── */
-.station-2-3d {
-  display: flex;
-  flex-direction: column;
-  gap: var(--space-md);
-  padding: var(--space-md);
-  border: 1px solid var(--color-border);
-  border-radius: var(--radius-lg);
-  background: linear-gradient(180deg, var(--color-surface), var(--color-bg));
-  box-shadow: var(--shadow-sm);
-}
-
-.station-2-3d-header {
-  display: flex;
-  flex-direction: column;
-  gap: var(--space-xs);
-}
-
-.station-2-3d-title {
-  font-size: clamp(1.2rem, 5vw, 1.55rem);
-  font-weight: 700;
-  line-height: 1.2;
-  letter-spacing: -0.02em;
-  color: var(--color-text);
-}
-
-.station-2-3d-help {
-  color: var(--color-text-muted);
-  font-size: 0.9rem;
-  line-height: 1.6;
-}
-
-.station-2-3d-frame {
-  display: flex;
-  flex-direction: column;
-  gap: var(--space-sm);
-}
-
-.station-2-3d-frame .three-scene-shell {
-  aspect-ratio: 3 / 4;
-  min-height: 19rem;
-}
-
-.station-2-3d-fallback {
-  display: flex;
-  flex-direction: column;
-  gap: var(--space-md);
-  width: 100%;
-}
-
-.station-2-3d-fallback .station-2-slice {
-  width: 100%;
-  padding: 0;
-  border: none;
-  border-radius: 0;
-  box-shadow: none;
-  background: transparent;
-}
-
 @keyframes station-2-soft-breathe {
   0%,
   100% {

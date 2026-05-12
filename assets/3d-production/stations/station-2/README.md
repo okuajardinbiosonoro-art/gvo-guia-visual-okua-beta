@@ -1,6 +1,6 @@
 # Producción 3D — Estación II
 
-Esta carpeta contiene la producción 3D de Estación II.
+Esta carpeta conserva la trazabilidad de producción visual de Estación II.
 
 Estado actual:
 
@@ -10,37 +10,35 @@ Estado actual:
 - Hay documento de interacción creado (GVO-3D-07).
 - Decisión de implementación tomada: Opción B.
 - Opción B = slice de validación 2D previo al GLB.
+- Metodología activa: web-first 2.5D.
+- Blender como carril principal: RETIRADO.
+- Runtime 3D anterior: RETIRADO.
+- GLB runtime: RETIRADO.
+- GLB staging activo: RETIRADO.
+- Slice React 2D/2.5D: CONSERVADO.
 - Slice React de validación implementado: SÍ.
+- Slice React de validación aprobado por responsable: SÍ.
+- Concept art aprobado: CONSERVADO.
+- Imagen runtime del slice: CONSERVADA.
 - Implementación React final de Estación II: NO.
 - Implementación React/Three final con GLB: NO.
 - Implementación 3D final: NO.
-- GLB aprobado en staging: SÍ.
-- GLB runtime copiado: SÍ.
-- GLB runtime path: `apps/web/src/assets/3d/stations/station-2/station-2-bioelectric-mediation.glb`.
-- No hay Estación II finalizada.
+- Estación II finalizada: NO.
 - Deuda de optimización: PNG runtime de 2.160.381 bytes; considerar WebP futuro.
-- Slice React de validación aprobado por responsable: SÍ.
 - Validado en iPhone: SÍ.
 - Validado en PC: SÍ.
-- Decisión de validación: APROBADO CON DEUDA PARA PREPARAR HANDOFF A BLENDER.
-- Salidas Blender auditadas: SÍ.
-- `.blend` candidato registrado: SÍ.
-- GLB candidato registrado: SÍ.
-- Preview registrado: SÍ.
-- Revisión visual humana: SÍ.
-- Método de revisión: preview.
-- Decisión visual: APROBADO COMO GLB CANDIDATO.
-- GLB aprobado por responsable: SÍ.
-- Integración React/Three runtime inicial: SÍ.
-- Fallback 2D conservado: SÍ.
-- Validación móvil/lab runtime: PENDIENTE.
-- Estación II finalizada: NO.
-- Blender: salida auditada; GLB aprobado y copiado a runtime.
+- Decisión de validación del slice: APROBADO CON DEUDA PARA PREPARAR HANDOFF A BLENDER.
+- Salidas Blender anteriores: OBSOLETAS.
+- `.blend` candidato anterior: RETIRADO.
+- GLB candidato anterior: RETIRADO.
+- GLB aprobado anterior: RETIRADO.
+- Preview Blender anterior: RETIRADO.
 
-El slice React actual valida interacción, microcopy y secuencia por capas.
-No debe interpretarse como cierre visual final ni como sustituto del GLB.
+El slice React actual queda como base principal para la nueva ruta web-first 2.5D.
+Valida interacción, microcopy y secuencia por capas.
+No debe interpretarse como cierre visual final.
 
-Dirección final: 3D (ADR-003).
-Próximo paso: validación móvil/lab del runtime 3D de Estación II.
+Blender/GLB queda pausado como apoyo visual futuro y no como núcleo de implementación.
+No usar los binarios retirados para runtime.
 
-La estación sigue sin declararse finalizada hasta esa validación.
+Próximo paso: contrato de estados + motion spec 2.5D.

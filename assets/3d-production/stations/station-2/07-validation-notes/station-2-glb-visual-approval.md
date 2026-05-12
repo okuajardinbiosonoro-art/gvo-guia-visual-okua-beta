@@ -1,5 +1,11 @@
 # Estación II — Aprobación visual del GLB candidato
 
+Estado documental: OBSOLETO.
+
+Este reporte queda como antecedente histórico. La ruta Blender/GLB fue retirada
+como carril principal de Estación II en GVO-3D-15-R1. La aprobación visual aquí
+registrada ya no habilita integración runtime.
+
 ## 1. Propósito
 Registrar la revisión visual humana del GLB candidato de Estación II.
 
