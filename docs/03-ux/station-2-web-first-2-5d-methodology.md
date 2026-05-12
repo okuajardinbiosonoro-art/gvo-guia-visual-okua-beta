@@ -75,4 +75,18 @@ Responsable:
 
 ## 8. Próximo paso
 
-Crear contrato de estados y motion spec 2.5D.
+Pulido visual 3D web-first para Estación II.
+
+## 9. Aclaración posterior de cierre
+
+El QA funcional no cierra Estación II.
+
+Antes de cerrar, debe completarse el acabado 3D web-first entendido como:
+profundidad visual, foco por capas, overlays, motion claro, Lía conectada con
+la capa activa y validación final en iPhone/PC.
+
+Blender/GLB no vuelve a ser carril principal, pero la estación sí debe alcanzar
+una sensación espacial/3D suficiente para cumplir la intención visual del proyecto.
+
+Referencia:
+`docs/03-ux/station-2-web-first-3d-scope.md`

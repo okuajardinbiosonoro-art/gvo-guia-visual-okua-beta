@@ -77,7 +77,7 @@ Checklist:
 
 ## 7. Decisión final QA
 
-APROBADO PARA TICKET DE CIERRE DE ESTACIÓN II.
+APROBADO FUNCIONALMENTE, NO LISTO PARA CIERRE.
 
 Motivo:
 - El responsable entregó evidencia visual real.
@@ -85,6 +85,12 @@ Motivo:
 - No se reportaron problemas.
 - El runtime 3D sigue retirado.
 - La estación todavía no se declara finalizada dentro de este ticket.
+
+Decisión posterior del responsable:
+La Estación II no se puede cerrar todavía. Aunque el motion pass y el QA
+funcional fueron aprobados, falta culminar el acabado 3D web-first, la
+profundidad visual y las animaciones completas esperadas para que esta
+estación sirva como base metodológica de las demás estaciones.
 
 ## 8. Deudas
 
@@ -98,5 +104,4 @@ Motivo:
 
 ## 9. Próximo paso
 
-Si decisión = APROBADO PARA TICKET DE CIERRE:
-abrir ticket de cierre de Estación II.
+Abrir ticket de pulido visual 3D web-first antes de cierre.

@@ -36,7 +36,10 @@ Estado actual:
 - Evidencia visual adjunta: SÍ.
 - Evidencia visual path: `assets/3d-production/stations/station-2/06-previews/station-2-motion-pass-evidence.mp4`.
 - Reduced-motion validado explícitamente: SÍ.
-- Decisión QA final: APROBADO PARA TICKET DE CIERRE DE ESTACIÓN II.
+- Decisión QA final: APROBADO FUNCIONALMENTE, NO LISTO PARA CIERRE.
+- Alcance 3D web-first: PENDIENTE.
+- Pulido visual 3D web-first: PENDIENTE.
+- Cierre de Estación II: BLOQUEADO hasta completar acabado 3D web-first.
 - GSAP/Motion alternativo: NO INSTALADO.
 - Concept art aprobado: CONSERVADO.
 - Imagen runtime del slice: CONSERVADA.
@@ -61,9 +64,11 @@ No debe interpretarse como cierre visual final.
 El motion pass anima transiciones de estado del slice 2.5D. No representa cierre
 visual final. Fue validado funcionalmente por el responsable en iPhone y PC.
 El QA final registró evidencia visual real y validación explícita de
-reduced-motion en iPhone.
+reduced-motion en iPhone. Esa validación aprueba el funcionamiento, pero no
+autoriza cierre: falta completar el acabado 3D web-first, la profundidad visual
+y las animaciones esperadas.
 
 Blender/GLB queda pausado como apoyo visual futuro y no como núcleo de implementación.
 No usar los binarios retirados para runtime.
 
-Próximo paso: abrir ticket de cierre de Estación II.
+Próximo paso: pulido visual 3D web-first.
