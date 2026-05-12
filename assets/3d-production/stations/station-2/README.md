@@ -24,6 +24,14 @@ Estado actual:
 - GSAP instalado: SÍ.
 - Motion por estados: SÍ.
 - Reduced-motion: SOPORTADO.
+- QA humano motion pass: REGISTRADO.
+- Validado con `npm run dev`: SÍ.
+- Validado en iPhone por responsable: SÍ.
+- Validado en PC por responsable: SÍ.
+- Recorrido completo sin errores reportado: SÍ.
+- Decisión QA: APROBADO FUNCIONALMENTE POR RESPONSABLE CON DEUDA DOCUMENTAL.
+- Captura/video adjunta: NO.
+- Validación explicit reduced-motion: PENDIENTE.
 - GSAP/Motion alternativo: NO INSTALADO.
 - Concept art aprobado: CONSERVADO.
 - Imagen runtime del slice: CONSERVADA.
@@ -46,9 +54,12 @@ Valida interacción, microcopy y secuencia por capas.
 No debe interpretarse como cierre visual final.
 
 El motion pass anima transiciones de estado del slice 2.5D. No representa cierre
-visual final. Debe validarse con captura o video del responsable antes de avanzar.
+visual final. Fue validado funcionalmente por el responsable en iPhone y PC,
+con deuda documental por falta de captura/video adjunta y validación explícita
+de reduced-motion.
 
 Blender/GLB queda pausado como apoyo visual futuro y no como núcleo de implementación.
 No usar los binarios retirados para runtime.
 
-Próximo paso: QA humano con captura/video en iPhone y PC.
+Próximo paso: decidir entre pulido visual 2.5D o QA final con evidencia
+visual antes de cierre de Estación II.
