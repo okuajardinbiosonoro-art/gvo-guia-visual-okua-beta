@@ -18,6 +18,10 @@ Estado actual:
 - Slice React 2D/2.5D: CONSERVADO.
 - Slice React de validación implementado: SÍ.
 - Slice React de validación aprobado por responsable: SÍ.
+- Contrato de estados y motion spec: CREADO.
+- Contrato TypeScript de interacción: CREADO.
+- Motion pass: PENDIENTE.
+- GSAP/Motion: NO INSTALADO.
 - Concept art aprobado: CONSERVADO.
 - Imagen runtime del slice: CONSERVADA.
 - Implementación React final de Estación II: NO.
@@ -41,4 +45,5 @@ No debe interpretarse como cierre visual final.
 Blender/GLB queda pausado como apoyo visual futuro y no como núcleo de implementación.
 No usar los binarios retirados para runtime.
 
-Próximo paso: contrato de estados + motion spec 2.5D.
+Próximo paso: implementar motion pass por estados, con GSAP/Motion solo
+después de aprobar este contrato.

@@ -1,79 +1,20 @@
 import { type FC, useState } from 'react';
-import { GuideAvatar, type LiaState } from '../GuideAvatar';
-
-type LayerStatus = 'locked' | 'available' | 'active' | 'completed' | 'review';
-
-type LayerDefinition = {
-  id: number;
-  title: string;
-  iconLabel: string;
-  panelLabel: string;
-  liaState: LiaState;
-  microcopy: string;
-};
-
-const LAYERS: readonly LayerDefinition[] = [
-  {
-    id: 1,
-    title: 'Planta viva',
-    iconLabel: 'Planta',
-    panelLabel: 'Planta / raíz / hoja',
-    liaState: 'curious',
-    microcopy:
-      'Primero está la planta. No es un adorno: es un ser vivo con actividad que normalmente no percibimos.',
-  },
-  {
-    id: 2,
-    title: 'Señal bioeléctrica',
-    iconLabel: 'Señal',
-    panelLabel: 'Variación de señal',
-    liaState: 'curious',
-    microcopy:
-      'Esta variación representa una señal bioeléctrica. Existe, pero todavía no es música.',
-  },
-  {
-    id: 3,
-    title: 'Captura / bionosificador',
-    iconLabel: 'Circuito',
-    panelLabel: 'Captura de señal',
-    liaState: 'curious',
-    microcopy:
-      'El bionosificador capta esa señal y la lleva a una forma que el sistema puede leer.',
-  },
-  {
-    id: 4,
-    title: 'Acondicionamiento',
-    iconLabel: 'Filtrado',
-    panelLabel: 'Filtrado / estabilización',
-    liaState: 'calm',
-    microcopy:
-      'Antes de interpretarla, la señal se prepara: se filtra, se estabiliza y se ordena.',
-  },
-  {
-    id: 5,
-    title: 'Interpretación / mapeo',
-    iconLabel: 'Mapeo',
-    panelLabel: 'Interpretación / mapeo',
-    liaState: 'curious',
-    microcopy:
-      'El sistema interpreta la señal y la mapea. Aquí el dato vivo empieza a convertirse en evento musical mediado.',
-  },
-  {
-    id: 6,
-    title: 'Resultado sonoro mediado',
-    iconLabel: 'Resultado',
-    panelLabel: 'Forma sonora mediada',
-    liaState: 'calm',
-    microcopy:
-      'El resultado no sale solo de la planta. Es una experiencia mediada por captura, electrónica, interpretación y software.',
-  },
-];
+import { GuideAvatar } from '../GuideAvatar';
+import {
+  STATION2_LAYERS,
+  advanceStation2Layer,
+  canSelectStation2Layer,
+  getInitialStation2InteractionState,
+  getStation2LayerStatus,
+  selectStation2Layer,
+  type Station2LayerStatus,
+} from './station2InteractionContract';
 
 type Props = {
   sceneSrc: string;
 };
 
-const getLayerButtonClassName = (status: LayerStatus): string => {
+const getLayerButtonClassName = (status: Station2LayerStatus): string => {
   switch (status) {
     case 'active':
       return 'station-2-layer-button-active';
@@ -89,7 +30,7 @@ const getLayerButtonClassName = (status: LayerStatus): string => {
   }
 };
 
-const getPanelClassName = (status: LayerStatus): string => {
+const getPanelClassName = (status: Station2LayerStatus): string => {
   switch (status) {
     case 'active':
       return 'station-2-panel-active';
@@ -106,53 +47,31 @@ const getPanelClassName = (status: LayerStatus): string => {
 };
 
 const Station2ValidationSlice: FC<Props> = ({ sceneSrc }) => {
-  const [activeLayerId, setActiveLayerId] = useState(1);
-  const [maxCompletedLayerId, setMaxCompletedLayerId] = useState(0);
-  const [reviewUnlocked, setReviewUnlocked] = useState(false);
+  const [interactionState, setInteractionState] = useState(
+    getInitialStation2InteractionState,
+  );
   const [imageFailed, setImageFailed] = useState(false);
 
-  const activeLayer = LAYERS[activeLayerId - 1] ?? LAYERS[0];
-  const lastLayerId = LAYERS.length;
+  const activeLayer =
+    STATION2_LAYERS.find((layer) => layer.id === interactionState.activeLayerId) ??
+    STATION2_LAYERS[0];
 
-  const getLayerStatus = (layerId: number): LayerStatus => {
-    if (reviewUnlocked) {
-      return layerId === activeLayerId ? 'active' : 'review';
-    }
-
-    if (layerId === activeLayerId) {
-      return 'active';
-    }
-
-    if (layerId <= maxCompletedLayerId) {
-      return 'completed';
-    }
-
-    if (layerId === activeLayerId + 1) {
-      return 'available';
-    }
-
-    return 'locked';
-  };
-
-  const handleLayerSelect = (layerId: number) => {
-    if (reviewUnlocked || layerId === activeLayerId) {
-      setActiveLayerId(layerId);
-    }
+  const handleLayerSelect = (layerId: typeof activeLayer.id) => {
+    setInteractionState((currentState) =>
+      selectStation2Layer(currentState, layerId),
+    );
   };
 
   const handleNextLayer = () => {
-    if (activeLayerId === lastLayerId) {
-      setMaxCompletedLayerId(lastLayerId);
-      setReviewUnlocked(true);
-      return;
-    }
-
-    setMaxCompletedLayerId((current) => Math.max(current, activeLayerId));
-    setActiveLayerId((current) => Math.min(lastLayerId, current + 1));
+    setInteractionState((currentState) => advanceStation2Layer(currentState));
   };
 
   return (
-    <section className="station-2-slice" aria-labelledby="station-2-slice-title">
+    <section
+      className="station-2-slice"
+      aria-labelledby="station-2-slice-title"
+      data-station2-motion-cue="scene_enter"
+    >
       <header className="station-2-slice-header">
         <p className="screen-label">Señal y mediación</p>
         <h3 id="station-2-slice-title" className="station-2-slice-title">
@@ -182,7 +101,12 @@ const Station2ValidationSlice: FC<Props> = ({ sceneSrc }) => {
           )}
         </div>
 
-        <div className="station-2-lia-card" aria-live="polite">
+        <div
+          className="station-2-lia-card"
+          aria-live="polite"
+          data-station2-layer-id={activeLayer.id}
+          data-station2-motion-cue="lia_shift"
+        >
           <GuideAvatar size="sm" state={activeLayer.liaState} />
           <div className="station-2-lia-copy">
             <p className="station-2-lia-step">Lía · Capa {activeLayer.id}</p>
@@ -192,17 +116,20 @@ const Station2ValidationSlice: FC<Props> = ({ sceneSrc }) => {
       </div>
 
       <nav className="station-2-layer-nav" aria-label="Capas de validación">
-        {LAYERS.map((layer) => {
-          const status = getLayerStatus(layer.id);
-          const disabled = !reviewUnlocked && layer.id !== activeLayerId;
+        {STATION2_LAYERS.map((layer) => {
+          const status = getStation2LayerStatus(interactionState, layer.id);
+          const disabled = !canSelectStation2Layer(interactionState, layer.id);
 
           return (
             <button
               key={layer.id}
               type="button"
               className={`station-2-layer-button ${getLayerButtonClassName(status)}`}
-              aria-pressed={activeLayerId === layer.id}
+              aria-pressed={interactionState.activeLayerId === layer.id}
               disabled={disabled}
+              data-station2-layer-id={layer.id}
+              data-station2-layer-status={status}
+              data-station2-motion-cue={layer.motionCue}
               onClick={() => handleLayerSelect(layer.id)}
             >
               <span className="station-2-layer-button-index">{layer.id}</span>
@@ -213,13 +140,17 @@ const Station2ValidationSlice: FC<Props> = ({ sceneSrc }) => {
       </nav>
 
       <div className="station-2-panel-stack" aria-label="Paneles de mediación">
-        {LAYERS.map((layer) => {
-          const status = getLayerStatus(layer.id);
+        {STATION2_LAYERS.map((layer) => {
+          const status = getStation2LayerStatus(interactionState, layer.id);
 
           return (
             <article
               key={layer.id}
               className={`station-2-panel ${getPanelClassName(status)}`}
+              data-station2-layer-id={layer.id}
+              data-station2-layer-status={status}
+              data-station2-motion-cue="panel_focus"
+              data-station2-focus-target={layer.focusTarget}
             >
               <p className="station-2-panel-kicker">Capa {layer.id}</p>
               <h4 className="station-2-panel-title">{layer.title}</h4>
@@ -231,7 +162,7 @@ const Station2ValidationSlice: FC<Props> = ({ sceneSrc }) => {
       </div>
 
       <div className="station-2-slice-actions">
-        {!reviewUnlocked ? (
+        {!interactionState.reviewUnlocked ? (
           <button type="button" className="btn btn-primary" onClick={handleNextLayer}>
             Siguiente capa
           </button>
