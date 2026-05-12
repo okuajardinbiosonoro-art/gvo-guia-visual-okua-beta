@@ -20,8 +20,11 @@ Estado actual:
 - Slice React de validación aprobado por responsable: SÍ.
 - Contrato de estados y motion spec: CREADO.
 - Contrato TypeScript de interacción: CREADO.
-- Motion pass: PENDIENTE.
-- GSAP/Motion: NO INSTALADO.
+- Motion pass: IMPLEMENTADO.
+- GSAP instalado: SÍ.
+- Motion por estados: SÍ.
+- Reduced-motion: SOPORTADO.
+- GSAP/Motion alternativo: NO INSTALADO.
 - Concept art aprobado: CONSERVADO.
 - Imagen runtime del slice: CONSERVADA.
 - Implementación React final de Estación II: NO.
@@ -42,8 +45,10 @@ El slice React actual queda como base principal para la nueva ruta web-first 2.5
 Valida interacción, microcopy y secuencia por capas.
 No debe interpretarse como cierre visual final.
 
+El motion pass anima transiciones de estado del slice 2.5D. No representa cierre
+visual final. Debe validarse con captura o video del responsable antes de avanzar.
+
 Blender/GLB queda pausado como apoyo visual futuro y no como núcleo de implementación.
 No usar los binarios retirados para runtime.
 
-Próximo paso: implementar motion pass por estados, con GSAP/Motion solo
-después de aprobar este contrato.
+Próximo paso: QA humano con captura/video en iPhone y PC.

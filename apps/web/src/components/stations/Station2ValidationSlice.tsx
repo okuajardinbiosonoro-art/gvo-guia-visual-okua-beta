@@ -1,4 +1,4 @@
-import { type FC, useState } from 'react';
+import { type FC, useEffect, useState } from 'react';
 import { GuideAvatar } from '../GuideAvatar';
 import {
   STATION2_LAYERS,
@@ -9,6 +9,7 @@ import {
   selectStation2Layer,
   type Station2LayerStatus,
 } from './station2InteractionContract';
+import { useStation2Motion } from './useStation2Motion';
 
 type Props = {
   sceneSrc: string;
@@ -51,10 +52,34 @@ const Station2ValidationSlice: FC<Props> = ({ sceneSrc }) => {
     getInitialStation2InteractionState,
   );
   const [imageFailed, setImageFailed] = useState(false);
+  const [reducedMotion, setReducedMotion] = useState(false);
 
   const activeLayer =
     STATION2_LAYERS.find((layer) => layer.id === interactionState.activeLayerId) ??
     STATION2_LAYERS[0];
+  const { rootRef } = useStation2Motion({
+    activeLayerId: interactionState.activeLayerId,
+    reviewUnlocked: interactionState.reviewUnlocked,
+    reducedMotion,
+  });
+
+  useEffect(() => {
+    if (typeof window === 'undefined' || !('matchMedia' in window)) {
+      return undefined;
+    }
+
+    const mediaQuery = window.matchMedia('(prefers-reduced-motion: reduce)');
+    const handleReducedMotionChange = () => {
+      setReducedMotion(mediaQuery.matches);
+    };
+
+    handleReducedMotionChange();
+    mediaQuery.addEventListener('change', handleReducedMotionChange);
+
+    return () => {
+      mediaQuery.removeEventListener('change', handleReducedMotionChange);
+    };
+  }, []);
 
   const handleLayerSelect = (layerId: typeof activeLayer.id) => {
     setInteractionState((currentState) =>
@@ -68,6 +93,7 @@ const Station2ValidationSlice: FC<Props> = ({ sceneSrc }) => {
 
   return (
     <section
+      ref={rootRef}
       className="station-2-slice"
       aria-labelledby="station-2-slice-title"
       data-station2-motion-cue="scene_enter"

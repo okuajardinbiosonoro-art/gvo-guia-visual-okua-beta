@@ -667,6 +667,12 @@ body {
   background: var(--color-surface);
 }
 
+.station-2-lia-card,
+.station-2-layer-button-active,
+.station-2-panel-active {
+  will-change: transform, opacity;
+}
+
 .station-2-lia-copy {
   display: flex;
   flex-direction: column;
@@ -847,6 +853,12 @@ body {
   .station-2-panel-active {
     animation: none !important;
     transition: none !important;
+  }
+
+  .station-2-lia-card,
+  .station-2-layer-button-active,
+  .station-2-panel-active {
+    will-change: auto;
   }
 }
 
