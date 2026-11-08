@@ -1,3 +1,16 @@
+<!-- CONTINUIDAD_DOCUMENTAL_20261107 -->
+### Documentación verificada · 7 de noviembre de 2026
+
+Antecedente histórico de la guía visual; no es la candidata ni la versión actual de GVO.
+
+Base de código conservada al publicar esta revisión: `65e52da17598501ad35b0adae87070b64d0fb2b1`.
+Los informes IEEE editables y sus PDF están en la biblioteca privada del responsable; el acceso requiere su cuenta autorizada.
+
+- [P09: informe, fuente LaTeX y trazabilidad](https://github.com/okuajardinbiosonoro/okua-memoria-tecnica/tree/main/proyectos/P09)
+
+Esta sección es un índice de navegación. La actualización documental no publica cambios de producto pendientes, no reanuda trabajos pausados ni modifica aprobaciones. El contenido anterior se conserva debajo como antecedente fechado.
+<!-- /CONTINUIDAD_DOCUMENTAL_20261107 -->
+
 # GVO — Guía Visual OKÚA
 
 Repositorio oficial del proyecto **GVO (Guía Visual OKÚA)**.
